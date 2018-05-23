@@ -1,20 +1,23 @@
 {
-  "static": {
-    "urls": {
-      "/polyfills.22634ea7c96a7dd2a02a.bundle.js": "c9f09ee17bf698424ae5718ee095186f79068671",
-      "/main.2016aaf2d72bf7c02ea0.bundle.js": "b3fae682c9ac4d9707b002f6bb0f0eb3f5f6aa04",
-      "/sw-register.6819cd2c5fa25470ecf2.bundle.js": "50d549edfbd188ed199d8d0b079afa593202e3ea",
-      "/vendor.63934d119086415531a1.bundle.js": "5792d9cb442fb50693173069df75394f2ea508d4",
-      "/inline.d0262e2c17b3d49979f8.bundle.js": "2b5821fcb544e8749b33d59e521419339b49f8ff",
-      "/styles.b0e45babab63a7b5f37d.bundle.css": "4f9aa3048ee7e6d926fa518829788ddff4b01db9",
-      "/favicon.ico": "8c21e78ac637dfaecf505ff1d6499cee3914261b",
-      "/index.html": "25f37e6822d6c364679813c3f34c7407dfd6f54e"
-    },
-    "external": {
+  "dynamic": {
+    "group": [{
+      "name": "indian food facts",
       "urls": {
-        "url": "https://fonts.googleapis.com/css?family=Roboto"
+         "https://indianfoodfacts-api.herokuapp.com/api/food/": {
+           "match": "prefix"
+         }
+      },
+      "cache": { 
+        "optimizeFor": "performance",  
+        "maxAgeMs": 3600000,  
+        "maxEntries": 20,     
+        "strategy": "lru"
       }
-    },
-    "_generatedFromWebpack": true
+    }]
+  },
+  "external": {
+    "urls": [{
+      "url": "https://fonts.googleapis.com/css?family=Roboto"
+    }]
   }
 }

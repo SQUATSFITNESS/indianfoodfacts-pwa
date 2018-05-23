@@ -5,7 +5,7 @@ import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatSelectModule, MatInputModule, MatToolbarModule, MatCardModule} from '@angular/material';
 import {RouterModule} from '@angular/router';
-
+import {ServiceWorkerModule} from '@angular/service-worker';
 import {AppComponent} from './app.component';
 import {FoodService} from '../services/food.service';
 import {FoodItemComponent} from '../components/food-item/food-item.component';
@@ -15,6 +15,7 @@ import {AddRecipeComponent} from '../components/add-recipe/add-recipe.component'
 import {appRoutes} from './app.routes';
 import {SearchFoodComponent} from '../components/search-food/search-food.component';
 import { RoundPipe } from '../pipes/round.pipe';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { RoundPipe } from '../pipes/round.pipe';
     HttpModule,
     JsonpModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatSelectModule, MatInputModule, MatToolbarModule, MatCardModule
+    MatButtonModule, MatSelectModule, MatInputModule, MatToolbarModule, MatCardModule,ServiceWorkerModule
   ],
   providers: [FoodService,RecipeService],
   bootstrap: [AppComponent]
