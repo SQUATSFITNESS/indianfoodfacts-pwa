@@ -14,7 +14,7 @@
 .add-button {
   font-size: 30px;
   position: fixed !important;
-  bottom: 100px;
+  bottom: 25px;
   right: 25px;
   display: block;
 }
